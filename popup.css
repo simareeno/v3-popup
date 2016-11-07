@@ -4,6 +4,9 @@ body {
 	-webkit-font-smoothing: antialiased;
 	font-family: 'PT Sans', sans-serif;
 	background: #000;
+	background-image: url(bg.png);
+	background-repeat: no-repeat;
+	background-position: top center;
 }
 
 .popup {
@@ -14,9 +17,21 @@ body {
 	left: 50%;
 	margin-left: -240px;
 	min-height: 200px;
-	top: 200px;
+	top: 250px;
 	padding: 70px 0 40px;
 	text-align: center;
+	z-index: 1;
+	box-shadow: 0 30px 350px 0 rgba(255,255,255,.5), 0 10px 50px 0 rgba(180,217,246,.3);
+}
+
+.overlay {
+	background: black;
+	opacity: .75;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
 }
 
 .title {
@@ -24,6 +39,14 @@ body {
 	font-size: 30px;
 	font-weight: bold;
 	margin-bottom: 25px;
+	position: relative;
+	z-index: 1;
+}
+
+.dude {
+	position: absolute;
+	top: -130px;
+	left: 70px;
 }
 
 .answer {
@@ -41,8 +64,13 @@ body {
 	height: 130px;
 	border-radius: 100%;
 	display: block;
+	position: relative;
 	margin: 0 auto 25px;
 	transition: all .2s ease-in-out;
+}
+
+.icon svg {
+	position: absolute;
 }
 
 .text {
@@ -60,11 +88,13 @@ path {
 }
 
 
-
-
-
 .yes .icon {
 	box-shadow: 0 0 0 3px rgba(43,193,36,.5);
+}
+
+.yes svg {
+	top: 32px;
+	left: 36px;
 }
 
 .yes .icon path {
@@ -86,11 +116,12 @@ path {
 }
 
 .yes:hover .icon path {
-	stroke: rgba(43,193,36,.5);
+	stroke: rgba(43,193,36,1);
 	stroke-width: 6px;
 }
 
-.yes:hover .icon path {
+.yes:active .icon {
+	background: rgba(43,193,36,.5);
 }
 
 
@@ -98,6 +129,16 @@ path {
 
 .no .icon {
 	box-shadow: 0 0 0 3px rgba(255,75,35,.5);
+}
+
+.no svg {
+	top: 35px;
+	left: 39px;
+}
+
+.no .icon path {
+	stroke: rgba(139, 52, 34, 1);
+	stroke-width: 3px;
 }
 
 .no:hover .icon {
@@ -111,4 +152,13 @@ path {
 
 .no:hover .text {
 	color: rgba(255,75,35,1);
+}
+
+.no:hover .icon path {
+	stroke-width: 6px;
+	stroke: rgba(255,75,35,1);
+}
+
+.no:active .icon {
+	background: rgba(255,75,35,.5);
 }
