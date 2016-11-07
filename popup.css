@@ -42,25 +42,73 @@ body {
 	border-radius: 100%;
 	display: block;
 	margin: 0 auto 25px;
+	transition: all .2s ease-in-out;
 }
 
 .text {
 	font-size: 24px;
 	font-weight: bold;
+	transition: color .2s ease-in-out;
 }
+
+path {
+	fill: none;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill-rule: evenodd;
+	transition: all .2s ease-in-out;
+}
+
+
+
+
 
 .yes .icon {
 	box-shadow: 0 0 0 3px rgba(43,193,36,.5);
+}
+
+.yes .icon path {
+	stroke: rgba(43,193,36,.5);
+	stroke-width: 3px;
 }
 
 .yes .text {
 	color: rgba(43,193,36,.5);
 }
 
+.yes:hover .text {
+	color: rgba(43,193,36,1);
+}
+
+.yes:hover .icon {
+	box-shadow: 0 0 0 6px rgba(43,193,36,1);
+	background: rgba(43,193,36,.1);
+}
+
+.yes:hover .icon path {
+	stroke: rgba(43,193,36,.5);
+	stroke-width: 6px;
+}
+
+.yes:hover .icon path {
+}
+
+
+
+
 .no .icon {
 	box-shadow: 0 0 0 3px rgba(255,75,35,.5);
 }
 
+.no:hover .icon {
+	box-shadow: 0 0 0 6px rgba(255,75,35,1);
+	background: rgba(255,75,35,.1);
+}
+
 .no .text {
 	color: rgba(255,75,35,.5);
+}
+
+.no:hover .text {
+	color: rgba(255,75,35,1);
 }
