@@ -18,7 +18,7 @@ body {
 	margin-left: -240px;
 	min-height: 200px;
 	top: 250px;
-	padding: 70px 0 40px;
+	padding: 70px 0 0px;
 	text-align: center;
 	z-index: 1;
 	box-shadow: 0 30px 350px 0 rgba(255,255,255,.5), 0 10px 50px 0 rgba(180,217,246,.3);
@@ -85,6 +85,25 @@ path {
 	stroke-linejoin: round;
 	fill-rule: evenodd;
 	transition: all .2s ease-in-out;
+}
+
+.form {
+	position: relative;
+	z-index: 2;
+}
+
+.typeform-wrapper, .typeform-widget, iframe, .form {
+		overflow: hidden;
+}
+
+.typeform-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.typeform-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
 
