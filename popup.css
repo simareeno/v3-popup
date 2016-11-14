@@ -17,7 +17,7 @@ body {
 	left: 50%;
 	margin-left: -240px;
 	min-height: 200px;
-	top: 250px;
+	top: 150px;
 	padding: 70px 0 0px;
 	text-align: center;
 	z-index: 1;
@@ -90,6 +90,17 @@ path {
 .form {
 	position: relative;
 	z-index: 2;
+}
+
+.typeform-widget {
+	width: 500px;
+}
+
+@-moz-document url-prefix()
+{
+	.typeform-widget {
+		width: 500px;
+	}
 }
 
 .typeform-wrapper, .typeform-widget, iframe, .form {
